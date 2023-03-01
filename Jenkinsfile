@@ -33,7 +33,7 @@ pipeline{
             }
         stage("Creating container"){
         	steps{
-				sh "sudo docker run -dp ${PORT}:80 --name httpd_${GIT_BRANCH} -p http_volume:/usr/local/apache2/htdocs/ httpd"
+				sh "sudo docker run -dp ${PORT}:80 --name httpd_${GIT_BRANCH} -v http_volume:/usr/local/apache2/htdocs/ httpd"
         	}
 
          }
