@@ -40,7 +40,7 @@ pipeline{
             
 		stage("Coping index file to container:"){
 			steps{
-				sh "sudo docker cp $WORKSPACE/index.html /var/lib/docker/volumes/http_volume"
+				sh "sudo cp $WORKSPACE/index.html /var/lib/docker/volumes/http_volume"
 			}
 		}
 	}
