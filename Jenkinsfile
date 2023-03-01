@@ -27,7 +27,7 @@ pipeline{
 		}
 		stage("Creating docker volume"){
         		steps{
-					sh "docker volume create http_volume"
+				sh "sudo docker volume create http_volume"
         		}
 
             }
